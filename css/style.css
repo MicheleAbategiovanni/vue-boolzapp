@@ -15,27 +15,69 @@ main {
     height: 90vh;
 }
 
-.bg-grey{
-    background-color: rgb(234,234,234);
+.bg-grey {
+    background-color: rgb(234, 234, 234);
 }
 
-.my-col-5{
+.my-col-5 {
     flex-basis: 41.66666667%;
 }
 
-.my-col-7{
+.my-col-7 {
     flex-basis: 58.33333333%;
 }
 
-.img-avatar{
+.img-avatar {
     width: 60px;
     height: auto;
 }
 
-.bg-notifier{
-    background-color: rgb(158	217	248);
+.bg-notifier {
+    background-color: rgb(158 217 248);
 }
 
-.color-notifier{
-    color: rgb(158	217	248);
+.color-notifier {
+    color: rgb(158 217 248);
+}
+
+.font-small {
+    font-size: .7rem
+}
+
+.chat-active {
+    background-color: rgb(233, 235, 235);
+}
+
+.bg-light-grey {
+    background-color: rgb(255, 255, 255);
+}
+
+.bg-chat {
+    background-image: url(../img/mine.jpg);
+}
+
+.text-send {
+    border: 1px;
+    border-radius: 10px;
+    background-color: rgb(213	240	186	);
+    padding: .8rem;
+    font-size: .9rem;
+    position: relative;
+}
+
+.text-receive {
+    border: 1px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: .8rem;
+    font-size: .9rem;
+    position: relative;
+}
+
+.time-chat {
+    position: absolute;
+    right: 10px;
+    bottom: 1px;
+    font-size: .5rem;
+    color: grey;
 }

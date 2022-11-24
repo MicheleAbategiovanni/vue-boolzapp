@@ -41,9 +41,17 @@
                             </div>
 
                             <div class="text-secondary">
-                                <i class="bi bi-arrow-clockwise"></i>
-                                <i class="bi bi-chat-left-fill px-3"></i>
-                                <i class="bi bi-three-dots-vertical"></i>
+                                <a href="#" class="text-reset">
+                                    <i class="bi bi-arrow-clockwise fs-5"></i>
+                                </a>
+
+                                <a href="#" class="text-reset">
+                                    <i class="bi bi-chat-left-fill px-3 fs-5"></i>
+                                </a>
+
+                                <a href="#" class="text-reset">
+                                    <i class="bi bi-three-dots-vertical fs-5"></i>
+                                </a>
 
                             </div>
                         </div>
@@ -61,10 +69,14 @@
                         </div>
 
                         <!-- Container Search -->
-                        <div class="p-2 bg-grey">
+                        <div class="p-2 bg-light-grey">
                             <div class="input-group input-group-sm ">
-                                <span class="input-group-text" id="inputGroup-sizing-sm bg-white"><i
-                                        class="bi bi-search px-3"></i></span>
+                                <span class="input-group-text" id="inputGroup-sizing-sm bg-white">
+                                    <a href="#" class="text-reset">
+                                        <i class="bi bi-search px-3"></i>
+                                    </a>
+                                </span>
+
                                 <input type="text" class="form-control" aria-label="Sizing example input"
                                     aria-describedby="inputGroup-sizing-sm" placeholder="Cerca o inizia una nuova chat">
                             </div>
@@ -72,139 +84,138 @@
 
                         <!-- Container All Chat -->
                         <div class="flex-grow-1 overflow-auto">
-                            
+
                             <!-- DIV PER UTENTE -->
-                            <div class="d-flex p-3">
+                            <div class="d-flex p-3 align-items-baseline chat-active">
 
-                                <div>
-                                    <img src="img/avatar_1.jpg" class="img-avatar" alt="avatar 1">
+                                <div class="">
+                                    <img :src="user[2].avatar" class="img-avatar border rounded-5" alt="avatar 1">
                                 </div>
 
-                                <div>
-                                    <h5>Michele</h5>
-                                    <div>Ultimo messaggio inviato</div>
-                                </div>
+                                <span>
+                                    <span>Michele</span>
+                                    <div class="font-small">Ultimo messaggio inviato</div>
+                                </span>
 
-                            </div>
 
-                            <div class="d-flex p-3">
-
-                                <div>
-                                    <img src="img/avatar_1.jpg" class="img-avatar" alt="avatar 1">
-                                </div>
-
-                                <div>
-                                    <h5>Michele</h5>
-                                    <div>Ultimo messaggio inviato</div>
+                                <div class="text-end">
+                                    <h6 class="font-small">12:00</h6>
                                 </div>
 
                             </div>
-                            <div class="d-flex p-3">
 
-                                <div>
-                                    <img src="img/avatar_1.jpg" class="img-avatar" alt="avatar 1">
-                                </div>
-
-                                <div>
-                                    <h5>Michele</h5>
-                                    <div>Ultimo messaggio inviato</div>
-                                </div>
-
-                            </div>
-                            <div class="d-flex p-3">
-
-                                <div>
-                                    <img src="img/avatar_1.jpg" class="img-avatar" alt="avatar 1">
-                                </div>
-
-                                <div>
-                                    <h5>Michele</h5>
-                                    <div>Ultimo messaggio inviato</div>
-                                </div>
-
-                            </div>
-                            <div class="d-flex p-3">
-
-                                <div>
-                                    <img src="img/avatar_1.jpg" class="img-avatar" alt="avatar 1">
-                                </div>
-
-                                <div>
-                                    <h5>Michele</h5>
-                                    <div>Ultimo messaggio inviato</div>
-                                </div>
-
-                            </div>
-                            <div class="d-flex p-3">
-
-                                <div>
-                                    <img src="img/avatar_1.jpg" class="img-avatar" alt="avatar 1">
-                                </div>
-
-                                <div>
-                                    <h5>Michele</h5>
-                                    <div>Ultimo messaggio inviato</div>
-                                </div>
-
-                            </div>
-                            <div class="d-flex p-3">
-
-                                <div>
-                                    <img src="img/avatar_1.jpg" class="img-avatar" alt="avatar 1">
-                                </div>
-
-                                <div>
-                                    <h5>Michele</h5>
-                                    <div>Ultimo messaggio inviato</div>
-                                </div>
-
-                            </div>
-                            <div class="d-flex p-3">
-
-                                <div>
-                                    <img src="img/avatar_1.jpg" class="img-avatar" alt="avatar 1">
-                                </div>
-
-                                <div>
-                                    <h5>Michele</h5>
-                                    <div>Ultimo messaggio inviato</div>
-                                </div>
-
-                            </div>
-                            <div class="d-flex p-3">
-
-                                <div>
-                                    <img src="img/avatar_1.jpg" class="img-avatar" alt="avatar 1">
-                                </div>
-
-                                <div>
-                                    <h5>Michele</h5>
-                                    <div>Ultimo messaggio inviato</div>
-                                </div>
-
-                            </div>
-                            <div class="d-flex p-3">
-
-                                <div>
-                                    <img src="img/avatar_1.jpg" class="img-avatar" alt="avatar 1">
-                                </div>
-
-                                <div>
-                                    <h5>Michele</h5>
-                                    <div>Ultimo messaggio inviato</div>
-                                </div>
-
-                            </div>
 
                         </div>
 
                     </div>
 
                     <!-- Container Rx -->
-                    <div class="my-col-7 border">
-                        <h2>ciao</h2>
+                    <div class="my-col-7 border d-flex flex-grow-1 flex-column">
+
+                        <!-- Header Chat -->
+                        <div class="bg-grey d-flex justify-content-between align-items-baseline px-2 py-3">
+                            <div>
+                                <a href="#">
+                                    <img src="img/avatar_1.jpg" class="img-avatar border rounded-5 pe-auto"
+                                        alt="avatar profilo">
+                                </a>
+                                <span>Michele</span>
+                                <div>Ultimo accesso</div>
+                            </div>
+
+                            <div class="text-secondary">
+                                <a href="#" class="text-reset">
+                                    <i class="bi bi-search fs-5"></i>
+                                </a>
+
+                                <a href="#" class="text-reset">
+                                    <i class="bi bi-paperclip px-3 fs-5"></i>
+                                </a>
+
+                                <a href="#" class="text-reset">
+                                    <i class="bi bi-three-dots-vertical fs-5"></i>
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <!-- Chat -->
+                        <div class="flex-grow-1 overflow-auto bg-chat p-5">
+                            
+                            <div class="row">
+                                
+                                <!-- Col Lx -->
+                                <div class="col-6">
+                                </div>
+                                
+                                <!-- Col Rx -->
+                                <div class="col-6">
+                                    <div class="text-send">
+                                        <div>Hai portato a spasso il cane?</div>
+                                        <div class="time-chat">15:30</div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row my-2">
+                                
+                                <!-- Col Lx -->
+                                <div class="col-6">
+                                </div>
+                                
+                                <!-- Col Rx -->
+                                <div class="col-6">
+                                    <div class="text-send">
+                                        <div>Ricordati di stendere i panni</div>
+                                        <div class="time-chat">15:50</div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row row-cols-2 ">
+                                
+                                <!-- Col Lx -->
+                                <div class="col">
+                                    <div class="text-receive">
+                                        <div>Tutto fatto!</div>
+                                        <div class="time-chat">16:15</div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Col Rx -->
+                                <div class="col"></div>
+
+                            </div>
+
+
+                        </div>
+
+                        <!-- Bottom Sidebar Chat -->
+                        <div class="bg-grey d-flex justify-content-between align-items-baseline py-2">
+
+                            <div class="px-3">
+                                <a href="#" class="text-reset">
+                                    <i class="bi bi-emoji-smile"></i>
+                                </a>
+                            </div>
+
+                            <div class="flex-grow-1">
+                                <input type="text" class="form-control" placeholder="Scrivi messaggio">
+
+                            </div>
+
+                            <div class="px-3">
+                                <a href="#" class="text-reset">
+                                    <i class="bi bi-mic-fill"></i>
+                                </a>
+                            </div>
+
+                        </div>
+
                     </div>
-                    
+
 
                 </div>
 

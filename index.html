@@ -64,7 +64,7 @@
 
                             <div class="px-2">
                                 <div>Ricevi notifiche di nuovi messaggi</div>
-                                <a href="#" class="fs-6">Attiva notifiche desktop</a>
+                                <a href="#" class="font-small color-grey">Attiva notifiche desktop</a>
                             </div>
                         </div>
 
@@ -83,23 +83,25 @@
                         </div>
 
                         <!-- Container All Chat -->
-                        <div class="flex-grow-1 overflow-auto">
+                        <div class="flex-grow-1 overflow-auto bg-white">
 
                             <!-- DIV PER UTENTE -->
-                            <div class="d-flex p-3 align-items-baseline chat-active">
+                            <div class="d-flex p-3 align-items-baseline border-bottom "
+                                 v-for="(userList, i) in user" 
+                                 :class="(i === 0) ? `chat-active` : `` ">
 
-                                <div class="">
-                                    <img :src="user[2].avatar" class="img-avatar border rounded-5" alt="avatar 1">
+                                <div>
+                                    <img :src="user[i].avatar" class="img-avatar border rounded-5" alt="avatar 1">
                                 </div>
 
-                                <span>
-                                    <span>Michele</span>
-                                    <div class="font-small">Ultimo messaggio inviato</div>
+                                <span class="flex-grow-1 px-2">
+                                    <span>{{user[i].name}}</span>
+                                    <div class="font-small color-grey">Ultimo messaggio inviato</div>
                                 </span>
 
 
                                 <div class="text-end">
-                                    <h6 class="font-small">12:00</h6>
+                                    <h6 class="font-small color-grey">12:00</h6>
                                 </div>
 
                             </div>
@@ -119,9 +121,12 @@
                                     <img src="img/avatar_1.jpg" class="img-avatar border rounded-5 pe-auto"
                                         alt="avatar profilo">
                                 </a>
-                                <span>Michele</span>
-                                <div>Ultimo accesso</div>
                             </div>
+
+                            <span class="flex-grow-1 px-2">
+                                <span>Michele</span>
+                                <div class="font-small color-grey">Ultimo accesso oggi alle 12:00</div>
+                            </span>
 
                             <div class="text-secondary">
                                 <a href="#" class="text-reset">
@@ -141,13 +146,13 @@
 
                         <!-- Chat -->
                         <div class="flex-grow-1 overflow-auto bg-chat p-5">
-                            
+
                             <div class="row">
-                                
+
                                 <!-- Col Lx -->
                                 <div class="col-6">
                                 </div>
-                                
+
                                 <!-- Col Rx -->
                                 <div class="col-6">
                                     <div class="text-send">
@@ -159,11 +164,11 @@
                             </div>
 
                             <div class="row my-2">
-                                
+
                                 <!-- Col Lx -->
                                 <div class="col-6">
                                 </div>
-                                
+
                                 <!-- Col Rx -->
                                 <div class="col-6">
                                     <div class="text-send">
@@ -175,7 +180,7 @@
                             </div>
 
                             <div class="row row-cols-2 ">
-                                
+
                                 <!-- Col Lx -->
                                 <div class="col">
                                     <div class="text-receive">
@@ -183,7 +188,7 @@
                                         <div class="time-chat">16:15</div>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Col Rx -->
                                 <div class="col"></div>
 
@@ -215,7 +220,6 @@
                         </div>
 
                     </div>
-
 
                 </div>
 

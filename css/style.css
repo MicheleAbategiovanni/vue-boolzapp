@@ -1,0 +1,41 @@
+body,
+main {
+    background-color: rgb(217, 219, 214);
+    height: 100vh;
+}
+
+.div-green {
+    background-color: rgb(65, 148, 136);
+    height: 10%;
+    width: 100%;
+    position: absolute;
+}
+
+.container {
+    height: 90vh;
+}
+
+.bg-grey{
+    background-color: rgb(234,234,234);
+}
+
+.my-col-5{
+    flex-basis: 41.66666667%;
+}
+
+.my-col-7{
+    flex-basis: 58.33333333%;
+}
+
+.img-avatar{
+    width: 60px;
+    height: auto;
+}
+
+.bg-notifier{
+    background-color: rgb(158	217	248);
+}
+
+.color-notifier{
+    color: rgb(158	217	248);
+}

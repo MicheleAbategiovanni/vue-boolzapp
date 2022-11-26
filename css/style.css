@@ -52,26 +52,12 @@ main {
     background-color: rgb(255, 255, 255);
 }
 
-.bg-chat {
+.chat-conatiner {
     background-image: url(../img/mine.jpg);
-}
-
-.text-send {
-    border: 1px;
-    border-radius: 10px;
-    background-color: rgb(213	240	186	);
-    padding: .8rem;
-    font-size: .9rem;
-    position: relative;
-}
-
-.text-receive {
-    border: 1px;
-    border-radius: 10px;
-    background-color: rgb(255, 255, 255);
-    padding: .8rem;
-    font-size: .9rem;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: start;
 }
 
 .time-chat {
@@ -82,6 +68,19 @@ main {
     color: grey;
 }
 
-.color-grey{
+.color-grey {
     color: grey;
+}
+
+.chat-message {
+    padding: 1rem;
+    background: white;
+    max-width: 60%;
+    min-width: 30%;
+    border-radius: 1rem;
+}
+
+.message-send {
+    align-self: flex-end;
+    background: #D5F9BA;
 }

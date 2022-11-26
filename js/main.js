@@ -3,7 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            
+
             user: [{
                 name: 'Michele',
                 avatar: 'img/avatar_1.jpg',
@@ -84,9 +84,16 @@ createApp({
                 ],
             },
             ],
+            userSelected: null,
         }
     },
+    
     methods: {
 
-    }
+    },
+
+    beforeMount() {
+        this.userSelected = this.user[0]
+    },
+
 }).mount('#app')

@@ -86,9 +86,9 @@
                         <div class="flex-grow-1 overflow-auto bg-white">
 
                             <!-- DIV PER UTENTE -->
-                            <div class="d-flex p-3 align-items-baseline border-bottom "
-                                 v-for="(userList, i) in user" 
-                                 :class="(i === 0) ? `chat-active` : `` ">
+                            <div class="d-flex p-3 align-items-baseline border-bottom " v-for="(userList, i) in user"
+                                :key="i + userList.name" :class="(i === 0) ? `chat-active` : `` "
+                                @click="userSelected = user[i]">
 
                                 <div>
                                     <img :src="user[i].avatar" class="img-avatar border rounded-5" alt="avatar 1">
@@ -118,13 +118,13 @@
                         <div class="bg-grey d-flex justify-content-between align-items-baseline px-2 py-3">
                             <div>
                                 <a href="#">
-                                    <img src="img/avatar_1.jpg" class="img-avatar border rounded-5 pe-auto"
+                                    <img :src="userSelected.avatar" class="img-avatar border rounded-5 pe-auto"
                                         alt="avatar profilo">
                                 </a>
                             </div>
 
                             <span class="flex-grow-1 px-2">
-                                <span>Michele</span>
+                                <span>{{userSelected.name}}</span>
                                 <div class="font-small color-grey">Ultimo accesso oggi alle 12:00</div>
                             </span>
 
@@ -145,53 +145,11 @@
                         </div>
 
                         <!-- Chat -->
-                        <div class="flex-grow-1 overflow-auto bg-chat p-5">
+                        <div class="flex-grow-1 overflow-auto chat-conatiner p-5">
 
-                            <div class="row">
-
-                                <!-- Col Lx -->
-                                <div class="col-6">
-                                </div>
-
-                                <!-- Col Rx -->
-                                <div class="col-6">
-                                    <div class="text-send">
-                                        <div>Hai portato a spasso il cane?</div>
-                                        <div class="time-chat">15:30</div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="row my-2">
-
-                                <!-- Col Lx -->
-                                <div class="col-6">
-                                </div>
-
-                                <!-- Col Rx -->
-                                <div class="col-6">
-                                    <div class="text-send">
-                                        <div>Ricordati di stendere i panni</div>
-                                        <div class="time-chat">15:50</div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="row row-cols-2 ">
-
-                                <!-- Col Lx -->
-                                <div class="col">
-                                    <div class="text-receive">
-                                        <div>Tutto fatto!</div>
-                                        <div class="time-chat">16:15</div>
-                                    </div>
-                                </div>
-
-                                <!-- Col Rx -->
-                                <div class="col"></div>
-
+                            <div class="chat-message" v-for="messageList in userSelected.messages"
+                                :class="{ 'message-send': messageList.status === 'sent' }">
+                                {{messageList.message}}
                             </div>
 
 

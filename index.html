@@ -165,7 +165,8 @@
                             </div>
 
                             <div class="flex-grow-1">
-                                <input type="text" class="form-control" placeholder="Scrivi messaggio">
+                                <input type="text" class="form-control" placeholder="Scrivi messaggio"
+                                    v-model="newMessage.message" @keyup.enter="onMessageSubmit">
 
                             </div>
 

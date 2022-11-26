@@ -85,18 +85,46 @@ createApp({
             },
             ],
             userSelected: null,
+            newMessage: [{
+                date: '10/01/2020 15:30:55',
+                message: "",
+            }],
+
         }
     },
-    
+
     methods: {
-        onUserSelected (){
+        onUserSelected() {
             this.userSelected = this.user[i];
             this.userSelected.classList.add('chat-active');
+        },
+
+        onMessageSubmit() {
+            this.userSelected.messages.push({
+                date: this.newMessage.date,
+                message: this.newMessage.message,
+                status: "sent",
+            });
+
+            this.startReplies();
+
+        },
+
+        startReplies() {
+        
+            this.timerId = setTimeout(() => {
+                this.userSelected.messages.push({
+                    date: this.newMessage.date,
+                    message: "ok",
+                    status: "received",
+                });
+            }, 1000);
+        
         },
     },
 
     beforeMount() {
-        this.userSelected = this.user[0]
+        this.userSelected = this.user[0];
     },
 
-}).mount('#app')
+}).mount('#app');

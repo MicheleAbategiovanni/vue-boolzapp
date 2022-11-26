@@ -87,7 +87,7 @@
 
                             <!-- DIV PER UTENTE -->
                             <div class="d-flex p-3 align-items-baseline border-bottom " v-for="(userList, i) in user"
-                                :key="i + userList.name" :class="(i === 0) ? `chat-active` : `` "
+                                :key="i + userList.name" :class="(userSelected === user[i]) ? `chat-active` : `` "
                                 @click="userSelected = user[i]">
 
                                 <div>

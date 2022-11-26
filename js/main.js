@@ -89,7 +89,10 @@ createApp({
     },
     
     methods: {
-
+        onUserSelected (){
+            this.userSelected = this.user[i];
+            this.userSelected.classList.add('chat-active');
+        },
     },
 
     beforeMount() {

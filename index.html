@@ -151,12 +151,19 @@
                                 :class="{ 'message-send': messageList.status === 'sent' }">
                                 {{messageList.message}}
 
-                                <span class="position-absolute top-0 icon-chevrdownm" @click="show = true"><i class="bi bi-chevron-up"></i></span>
+                                <span class="position-absolute top-0 icon-chevrdownm" key="m" @click="toggle(m)">
+                                    <i class="bi bi-chevron-up"></i>
+                                </span>
+
+                                <div class="position-absolute bg-white border p-3 rounded-3" v-show="isOpen">
+                                    <ul>
+                                        <li class="">
+                                            <a href="#" class="text-decoration-none">Elimina</a>
+                                        </li>
+                                    </ul>
+                                </div>
 
                             </div>
-
-
-                            
 
                         </div>
 

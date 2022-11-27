@@ -90,7 +90,7 @@ createApp({
                 message: "",
             }],
             search: "",
-            show: false,
+            isOpen: false,
 
         }
     },
@@ -113,7 +113,7 @@ createApp({
         },
 
         startReplies() {
-        
+
             this.timerId = setTimeout(() => {
                 this.userSelected.messages.push({
                     date: this.newMessage.date,
@@ -121,8 +121,12 @@ createApp({
                     status: "received",
                 });
             }, 1000);
-        
+
         },
+
+        toggle() {
+            this.isOpen = !this.isOpen;
+        }
     },
 
     beforeMount() {
@@ -131,10 +135,10 @@ createApp({
 
     computed: {
         filteredList() {
-          return this.postList.filter(post => {
-            return post.title.toLowerCase().includes(this.search.toLowerCase())
-          })
+            return this.postList.filter(post => {
+                return post.title.toLowerCase().includes(this.search.toLowerCase())
+            })
         }
-      }
+    }
 
 }).mount('#app');

@@ -84,3 +84,29 @@ main {
     align-self: flex-end;
     background: #D5F9BA;
 }
+
+.icon-chevrdownm{
+    right: 15px;
+    opacity: 0;
+}
+
+.chat-message:hover .icon-chevrdownm{
+    transition: 2s all;
+    opacity: 1;
+}
+
+.dropdown__menu {
+    top: 100%;
+    right: 0;
+    position: absolute;
+    z-index: 10;
+    height: 25rem;
+    min-width: 300px;
+    margin-top: 1rem;
+    overflow-y: auto;
+    padding: 2rem 1rem 2rem 0rem;
+    border-radius: 12px;
+    background-color: white;
+    border: 1px solid black;
+    background-clip: padding-box;
+}

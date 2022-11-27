@@ -147,11 +147,16 @@
                         <!-- Chat -->
                         <div class="flex-grow-1 overflow-auto chat-conatiner p-5">
 
-                            <div class="chat-message" v-for="messageList in userSelected.messages"
+                            <div class="chat-message position-relative" v-for="messageList in userSelected.messages"
                                 :class="{ 'message-send': messageList.status === 'sent' }">
                                 {{messageList.message}}
+
+                                <span class="position-absolute top-0 icon-chevrdownm" @click="show = true"><i class="bi bi-chevron-up"></i></span>
+
                             </div>
 
+
+                            
 
                         </div>
 

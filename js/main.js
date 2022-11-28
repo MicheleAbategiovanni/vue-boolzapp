@@ -134,6 +134,10 @@ createApp({
             })
         },
 
+        removeMessagge(indexItem){
+            this.userSelected.messages.splice(indexItem, 1);
+        }
+
     },
 
     beforeMount() {

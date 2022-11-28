@@ -88,16 +88,16 @@
 
                             <!-- DIV PER UTENTE -->
 
-                            <div class="d-flex p-3 align-items-baseline border-bottom " v-for="(userList, i) in getFilterList()"
-                                :key="i + userList.name" :class="(userSelected === user[i]) ? `chat-active` : `` "
-                                @click="userSelected = user[i]">
+                            <div class="d-flex p-3 align-items-baseline border-bottom " v-for="(user, i) in getFilterList()"
+                                :key="i + user.name" :class="(userSelected === user) ? `chat-active` : `` "
+                                @click="userSelected = user">
 
                                 <div>
-                                    <img :src="user[i].avatar" class="img-avatar border rounded-5" alt="avatar 1">
+                                    <img :src="user.avatar" class="img-avatar border rounded-5" alt="avatar 1">
                                 </div>
 
                                 <span class="flex-grow-1 px-2">
-                                    <span>{{user[i].name}}</span>
+                                    <span>{{user.name}}</span>
                                     <div class="font-small color-grey">Ultimo messaggio inviato</div>
                                 </span>
 

@@ -4,7 +4,7 @@ createApp({
     data() {
         return {
 
-            user: [{
+            userList: [{
                 name: 'Michele',
                 avatar: 'img/avatar_1.jpg',
                 visible: true,
@@ -129,15 +129,15 @@ createApp({
         },
 
         getFilterList() {
-            return this.user.filter(users => {
-                return users.name.toLowerCase().includes(this.search.toLowerCase());
+            return this.userList.filter(user => {
+                return user.name.toLowerCase().includes(this.search.toLowerCase());
             })
         },
 
     },
 
     beforeMount() {
-        this.userSelected = this.user[0];
+        this.userSelected = this.userList[0];
     },
 
 }).mount('#app');

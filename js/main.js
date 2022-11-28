@@ -89,7 +89,7 @@ createApp({
                 date: '10/01/2020 15:30:55',
                 message: "",
             }],
-            search: "",
+            search: '',
             isOpen: false,
 
         }
@@ -126,19 +126,18 @@ createApp({
 
         toggle() {
             this.isOpen = !this.isOpen;
-        }
+        },
+
+        getFilterList() {
+            return this.user.filter(users => {
+                return users.name.toLowerCase().includes(this.search.toLowerCase());
+            })
+        },
+
     },
 
     beforeMount() {
         this.userSelected = this.user[0];
     },
-
-    computed: {
-        filteredList() {
-            return this.postList.filter(post => {
-                return post.title.toLowerCase().includes(this.search.toLowerCase())
-            })
-        }
-    }
 
 }).mount('#app');

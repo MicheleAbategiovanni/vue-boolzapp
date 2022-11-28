@@ -78,7 +78,8 @@
                                 </span>
 
                                 <input type="text" class="form-control" aria-label="Sizing example input"
-                                    aria-describedby="inputGroup-sizing-sm" placeholder="Cerca o inizia una nuova chat">
+                                    aria-describedby="inputGroup-sizing-sm" placeholder="Cerca o inizia una nuova chat"
+                                    v-model="search">
                             </div>
                         </div>
 
@@ -86,7 +87,8 @@
                         <div class="flex-grow-1 overflow-auto bg-white">
 
                             <!-- DIV PER UTENTE -->
-                            <div class="d-flex p-3 align-items-baseline border-bottom " v-for="(userList, i) in user"
+
+                            <div class="d-flex p-3 align-items-baseline border-bottom " v-for="(userList, i) in getFilterList()"
                                 :key="i + userList.name" :class="(userSelected === user[i]) ? `chat-active` : `` "
                                 @click="userSelected = user[i]">
 
